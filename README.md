@@ -60,6 +60,8 @@ The full report is structured as a 4-part narrative, guiding stakeholders from t
 
 The business is not just growing; it's selling better. In early 2020, both Revenue and, more importantly, Average Order Value (AOV) spiked and established a new, higher baseline (from ~$230 to ~$300+). This proves we are a high-value business.
 
+![Database ER](assets/Executive_Summary.png)
+
 **Insight 2: (Page 2) Our Success is Built on Concentration**
 
 Our growth, while impressive, is not diversified. This is our greatest strength and our biggest risk.
@@ -70,15 +72,24 @@ Product: We have clear "Value" (27in Monitor) and "Volume" (Nintendo Switch) cha
 
 Channel: We are a single-engine company. Over 85% of revenue comes from 'Direct' traffic, signaling brand strength but a critical dependency.
 
+![Database ER](assets/Business_Overview_1.png)
+
 **Insight 3: (Page 3) The $231 AOV Gap**
 
 We are a one-platform company. The data reveals a massive $231 AOV gap between our "High-Intent" Desktop shoppers ($305 AOV) and our "Quick-Task" Mobile shoppers ($74 AOV). With 95% of revenue tied to the website, our mobile app is a "dead-weight" asset and our single biggest growth opportunity.
+
+![Database ER](assets/Platform_Acquisition_First_part.png)
+
+![Database ER](assets/Platform_Acquisition_Second_Part.png)
 
 **Insight 4: (Page 4) The 75-Day Shipping Crisis**
 
 This is the climax of the story. Our product mix is healthy (clear Value/Volume drivers), but none of it matters. After fixing a major data bug, the analysis revealed a systemic, 75-day average shipping time.
 
 This is not isolated to one product; it is an operational failure across our entire catalog. This 2.5-month delay is an existential threat that is actively destroying brand loyalty and erasing all other successes.
+
+![Database ER](assets/Product_Operations_part_1.png)
+![Database ER](assets/Product_Operations_Part_2.png)
 
 ****5. Actionable Recommendations****
 
@@ -134,8 +145,8 @@ Based on these findings, I present a prioritized, three-phase action plan:
 
 This section demonstrates a practical understanding of real-world data challenges.
 
-Critical Data Integrity: The most significant finding of this project was a major ETL error where the PURCHASE_TS and SHIP_TS columns were inverted in the source data. The 75-day shipping crisis was only uncovered after creating new, corrected columns in Power BI (DAX) to swap the values. This highlights the risk of "clean"-looking data.
+* **Critical Data Integrity:** The most significant finding of this project was a major ETL error where the PURCHASE_TS and SHIP_TS columns were inverted in the source data. The 75-day shipping crisis was only uncovered after creating new, corrected columns in Power BI (DAX) to swap the values. This highlights the risk of "clean"-looking data.
 
-External Factors: The 2020-2021 growth spike is correlated with, but not definitively caused by, global pandemic-era e-commerce trends.
+* **External Factors:** The 2020-2021 growth spike is correlated with, but not definitively caused by, global pandemic-era e-commerce trends.
 
-Data Granularity: The bottleneck analysis is limited to the PURCHASE_TS and SHIP_TS timestamps. A deeper, future analysis would require warehouse-level data (e.g., order_processed_ts, label_created_ts) to pinpoint the exact failure point in the 75-day gap.
+* **Data Granularity:** The bottleneck analysis is limited to the PURCHASE_TS and SHIP_TS timestamps. A deeper, future analysis would require warehouse-level data (e.g., order_processed_ts, label_created_ts) to pinpoint the exact failure point in the 75-day gap.
