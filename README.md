@@ -38,6 +38,8 @@ Key data columns analyzed include:
 
 * *COUNTRY_CODE, Regions*
 
+![Database ER](assets/Database_structure.png)
+
 ## **3. Executive Summary**
 
 This analysis of E-list Electronics' data reveals a story of two-halves.
@@ -47,6 +49,8 @@ While the company experienced **explosive, profitable growth in 2020-2021** (dri
 Most critically, all positive momentum is being undermined by a **catastrophic, systemic 75-DAY average shipping time**. This operational failure—uncovered after fixing a critical ETL bug—is an existential threat to brand loyalty.
 
 This report recommends an "all-hands" crisis-management approach to fix operations, followed by a "protect-then-grow" strategy.
+
+![Database ER](assets/Executive_Summary.png)
 
 ## 4. Insights Deep Dive: The 4-Page Story
 
